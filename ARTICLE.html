@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ARTICLE</title>
+    <meta name="viewport" content="width=640, height=1136, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+
+    <div class="banner_article">
+            <img src="banners/banner6.jpg">
+    </div>
+    
+    <div class="nav_background">
+    <header>
+        <nav>
+            <ul>
+                <a href="HOME.html">HOME</a>
+                <a href="EVENTS.html">EVENTS</a>
+                <a href="ABOUT_US.html">ABOUT US</a>
+                <a href="ARTICLE.html">ARTICLE</a>
+            </ul>
+        </nav>
+    </header>
+    </div>
+
+    <div class="rock_i_byparken">
+    <img src="main_pictures/rock-i-byparken.jpg">
+    </div>
+
+    <style>
+        .rock_i_byparken img {
+    width: 100%;
+}
+    </style>
+
+</div>
+    <style>
+            #map {
+             height: 300px;
+             width: 100%;
+            }
+         </style>
+
+
+    <div id="map"></div>
+
+    <script>
+    
+var locations = [
+    ['Folkeparken, Roskilde', 55.645620, 12.088136,]
+
+    ];
+
+function initMap() {
+var myLatLng = {lat: 55.5790965, lng: 12.255277400000068};
+
+var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: myLatLng
+    });
+
+var count;
+
+for (count = 0; count < locations.length; count++) {  
+    new google.maps.Marker({
+    position: new google.maps.LatLng(locations[count][1], locations[count][2]),
+    map: map,
+    title: locations[count][0]
+    });
+}
+}
+     </script>
+
+
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaUy9-pUlPR53Zwh2YbxJnkBMt0Luca0k
+&callback=initMap">
+</script>
+
+<p>
+    Place: Folkeparken
+    <br>Time: 12. April 2018
+    <br>Price: 15 EUR
+</p>
+
+<div class="lorem_text">
+<p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum enim cum animi iusto adipisci itaque repellendus laboriosam doloremque fugit est illo exercitationem, maxime in quis voluptas quibusdam unde! Unde, aliquid!
+</p>
+</div>
+
+                                            
+    <footer>
+        &copy; Copyright 2018
+    </footer>
+    
+</body>
+</html>
